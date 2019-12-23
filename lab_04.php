@@ -26,21 +26,21 @@
 
         <?php
         if(isset($_POST['submit']) && isset($_POST['sign'])) {
-            echo $_POST['first_num'] . ' ';
+            echo (int)$_POST['first_num'] . ' ';
             echo $_POST['sign'] . ' ';
-            echo $_POST['second_num'] . ' = ';
+            echo (int)$_POST['second_num'] . ' = ';
             switch ($_POST['sign']) {
                 case '+':
-                    echo $_POST['first_num'] + $_POST['second_num'];
+                    echo (int)$_POST['first_num'] + (int)$_POST['second_num'];
                     break;
                 case '-':
-                    echo $_POST['first_num'] - $_POST['second_num'];
+                    echo (int)$_POST['first_num'] - (int)$_POST['second_num'];
                     break;
                 case '*':
-                    echo $_POST['first_num'] * $_POST['second_num'];
+                    echo (int)$_POST['first_num'] * (int)$_POST['second_num'];
                     break;
                 case '/':
-                    echo $_POST['first_num'] / $_POST['second_num'];
+                    echo (int)$_POST['first_num'] / (int)$_POST['second_num'];
                     break;
             }
         }
